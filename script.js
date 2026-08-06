@@ -101,7 +101,7 @@
     "Full-Stack Developer",
     "AI/ML Enthusiast",
     "IoT Tinkerer",
-    "CSE Graduate '26",
+    "B.Sc Graduate '26",
   ];
   let roleIndex = 0;
   let charIndex = 0;
