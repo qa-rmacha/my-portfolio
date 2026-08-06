@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Alex Morgan — Aspiring Software Engineer and CSE Graduate. Full-Stack, AI/ML and IoT projects." />
+  <meta name="theme-color" content="#0f172a" />
+  <title>Alex Morgan | Aspiring Software Engineer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            display: ['Space Grotesk', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            accent: {
+              DEFAULT: '#22d3ee',
+              deep: '#6366f1',
+            },
+          },
+          animation: {
+            'blob': 'blob 12s ease-in-out infinite',
+            'float': 'float 5s ease-in-out infinite',
+            'blink': 'blink 1s step-end infinite',
+          },
+          keyframes: {
+            blob: {
+              '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+              '33%': { transform: 'translate(30px, -40px) scale(1.1)' },
+              '66%': { transform: 'translate(-20px, 20px) scale(0.95)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-12px)' },
+            },
+            blink: {
+              '0%, 100%': { opacity: '1' },
+              '50%': { opacity: '0' },
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-slate-100 text-slate-800 dark:bg-slate-950 dark:text-slate-200 font-sans antialiased transition-colors duration-300">
+
+  <!-- ===== Background Decor ===== -->
+  <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none" aria-hidden="true">
+    <div class="blob bg-cyan-400/30 dark:bg-cyan-500/20"></div>
+    <div class="blob blob-2 bg-indigo-400/30 dark:bg-indigo-500/20"></div>
+    <div class="blob blob-3 bg-fuchsia-400/20 dark:bg-fuchsia-500/10"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- ===== Navigation ===== -->
+  <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between px-5 sm:px-8 py-4">
+      <a href="#home" class="font-display font-bold text-xl tracking-tight group">
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-indigo-500">&lt;</span>
+        <span class="text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Alex</span>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-indigo-500">/&gt;</span>
+      </a>
+
+      <ul id="nav-links" class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certificates" class="nav-link">Certificates</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="flex items-center gap-3">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" aria-label="Toggle theme" class="theme-toggle-btn">
+          <i data-lucide="moon" class="icon-light w-5 h-5"></i>
+          <i data-lucide="sun" class="icon-dark w-5 h-5"></i>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="menu-toggle" aria-label="Open menu" class="md:hidden text-slate-800 dark:text-slate-200 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu md:hidden">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#skills" class="mobile-link">Skills</a>
+      <a href="#projects" class="mobile-link">Projects</a>
+      <a href="#certificates" class="mobile-link">Certificates</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section id="home" class="min-h-screen flex items-center pt-24 pb-16">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8 w-full grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Left -->
+        <div class="reveal">
+          <span class="inline-flex items-center gap-2 text-xs font-semibold tracking-wide uppercase px-4 py-2 rounded-full border border-cyan-500/40 text-cyan-600 dark:text-cyan-400 bg-cyan-500/5 mb-6">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            Open to SDE Roles &amp; Internships
+          </span>
+
+          <h1 class="font-display text-4xl sm:text-5xl xl:text-6xl font-bold leading-tight mb-4">
+            Hi, I'm
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 via-indigo-500 to-cyan-500 bg-300 animate-gradient">Alex Morgan</span>
+          </h1>
+
+          <p class="font-display text-xl sm:text-2xl text-slate-600 dark:text-slate-400 mb-6 h-8">
+            <span id="typed" class="font-semibold text-cyan-600 dark:text-cyan-400"></span><span class="cursor">|</span>
+          </p>
+
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed max-w-xl mb-8">
+            B.Tech CSE graduate passionate about building clean, scalable software. I love turning ideas into real
+            products — from full-stack web apps to AI-powered tools and IoT systems.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 mb-10">
+            <a href="#projects" class="btn-primary">
+              <i data-lucide="folder-git-2" class="w-5 h-5"></i>
+              View Projects
+            </a>
+            <a href="resume.pdf" download class="btn-secondary">
+              <i data-lucide="download" class="w-5 h-5"></i>
+              Download Resume
+            </a>
+          </div>
+
+          <!-- Social icons -->
+          <div class="flex items-center gap-4">
+            <a href="https://github.com/yourusername" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+              <i data-lucide="github" class="w-5 h-5"></i>
+            </a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+              <i data-lucide="linkedin" class="w-5 h-5"></i>
+            </a>
+            <a href="mailto:alex.morgan@email.com" aria-label="Email" class="social-icon">
+              <i data-lucide="mail" class="w-5 h-5"></i>
+            </a>
+            <a href="tel:+919876543210" aria-label="Phone" class="social-icon">
+              <i data-lucide="phone" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Code card -->
+        <div class="reveal hidden lg:block">
+          <div class="code-card animate-float">
+            <div class="flex items-center gap-2 px-4 py-3 border-b border-slate-700/60">
+              <span class="w-3 h-3 rounded-full bg-rose-400"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-400"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+              <span class="ml-3 text-xs text-slate-400 font-mono">alex-portfolio.ts</span>
+            </div>
+            <pre class="p-5 text-[13px] leading-relaxed font-mono text-slate-300 overflow-x-auto"><code><span class="text-fuchsia-400">const</span> <span class="text-cyan-300">developer</span> = <span class="text-fuchsia-400">new</span> <span class="text-cyan-300">Engineer</span>({
+  name: <span class="text-emerald-300">"Alex Morgan"</span>,
+  degree: <span class="text-emerald-300">"B.Tech CSE"</span>,
+  batch: <span class="text-emerald-300">"2026"</span>,
+  cgpa: <span class="text-amber-300">8.7</span>,
+  <span class="text-fuchsia-400">async</span> <span class="text-cyan-300">build</span>() {
+    <span class="text-fuchsia-400">while</span> (<span class="text-cyan-300">alive</span>) {
+      <span class="text-fuchsia-400">await</span> <span class="text-cyan-300">this</span>.<span class="text-cyan-300">learn</span>(<span class="text-emerald-300">"something new"</span>);
+      <span class="text-fuchsia-400">await</span> <span class="text-cyan-300">this</span>.<span class="text-cyan-300">ship</span>(<span class="text-emerald-300">"an idea"</span>);
+    }
+  }
+});</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll hint -->
+      <a href="#about" class="scroll-hint" aria-label="Scroll to About">
+        <i data-lucide="chevron-down" class="w-5 h-5"></i>
+      </a>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="py-24">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <div class="section-heading reveal">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Get to know me</h2>
+        </div>
+
+        <div class="grid lg:grid-cols-5 gap-10">
+          <!-- Summary -->
+          <div class="lg:col-span-3 reveal">
+            <div class="card p-7 sm:p-9 h-full">
+              <h3 class="font-display text-xl font-semibold mb-4 flex items-center gap-3">
+                <span class="grad-icon"><i data-lucide="user" class="w-5 h-5"></i></span>
+                Software Engineer in the making
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                I'm a motivated Computer Science graduate with a strong foundation in data structures, algorithms, and
+                software development. I enjoy solving real-world problems through code and have hands-on experience
+                building full-stack applications, machine-learning models, and embedded IoT systems.
+              </p>
+              <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+                My goal is to work in an environment where I can contribute to meaningful products while continuously
+                sharpening my skills, collaborating with great engineers, and growing into a well-rounded software
+                developer.
+              </p>
+
+              <div class="grid grid-cols-3 gap-4 text-center">
+                <div class="stat-box">
+                  <p class="font-display text-2xl sm:text-3xl font-bold gradient-text">10+</p>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Projects Built</p>
+                </div>
+                <div class="stat-box">
+                  <p class="font-display text-2xl sm:text-3xl font-bold gradient-text">3+</p>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Hackathons</p>
+                </div>
+                <div class="stat-box">
+                  <p class="font-display text-2xl sm:text-3xl font-bold gradient-text">15+</p>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Certifications</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="lg:col-span-2 reveal">
+            <div class="card p-7 sm:p-9 h-full">
+              <h3 class="font-display text-xl font-semibold mb-5 flex items-center gap-3">
+                <span class="grad-icon"><i data-lucide="graduation-cap" class="w-5 h-5"></i></span>
+                Education
+              </h3>
+
+              <div class="edu-item">
+                <div class="flex items-center justify-between mb-1">
+                  <p class="font-semibold text-slate-900 dark:text-white">B.Tech — Computer Science &amp; Engineering</p>
+                </div>
+                <p class="text-sm text-slate-600 dark:text-slate-400">ABC Institute of Technology, University of XYZ</p>
+                <div class="flex items-center gap-2 mt-2">
+                  <span class="chip"><i data-lucide="calendar" class="w-3.5 h-3.5"></i>2022 – 2026</span>
+                  <span class="chip"><i data-lucide="award" class="w-3.5 h-3.5"></i>CGPA: 8.7 / 10</span>
+                </div>
+              </div>
+
+              <div class="edu-item border-t border-slate-200 dark:border-slate-800 pt-4 mt-4">
+                <p class="font-semibold text-slate-900 dark:text-white">Senior Secondary (XII) — PCM + Computer Science</p>
+                <p class="text-sm text-slate-600 dark:text-slate-400">Model Senior Secondary School</p>
+                <div class="flex items-center gap-2 mt-2">
+                  <span class="chip"><i data-lucide="calendar" class="w-3.5 h-3.5"></i>2020 – 2022</span>
+                  <span class="chip"><i data-lucide="award" class="w-3.5 h-3.5"></i>92%</span>
+                </div>
+              </div>
+
+              <p class="mt-5 text-sm text-slate-500 dark:text-slate-400 flex items-start gap-2">
+                <i data-lucide="target" class="w-4 h-4 mt-0.5 shrink-0 text-cyan-500"></i>
+                Seeking full-time SDE roles &amp; internship opportunities starting 2026.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="py-24">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <div class="section-heading reveal">
+          <span class="section-tag">Tech Stack</span>
+          <h2 class="section-title">Skills &amp; technologies</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Languages -->
+          <div class="card p-7 reveal">
+            <h3 class="font-display text-lg font-semibold mb-4 flex items-center gap-3">
+              <span class="grad-icon"><i data-lucide="code-2" class="w-5 h-5"></i></span>
+              Languages
+            </h3>
+            <div class="flex flex-wrap gap-3">
+              <span class="badge badge-python"><i data-lucide="terminal" class="w-4 h-4"></i>Python</span>
+              <span class="badge badge-java"><i data-lucide="coffee" class="w-4 h-4"></i>Java</span>
+              <span class="badge badge-cpp"><i data-lucide="cpu" class="w-4 h-4"></i>C / C++</span>
+              <span class="badge badge-js"><i data-lucide="file-code" class="w-4 h-4"></i>JavaScript</span>
+              <span class="badge badge-ts"><i data-lucide="file-type" class="w-4 h-4"></i>TypeScript</span>
+              <span class="badge badge-sql"><i data-lucide="database" class="w-4 h-4"></i>SQL</span>
+            </div>
+          </div>
+
+          <!-- Web / Frameworks -->
+          <div class="card p-7 reveal">
+            <h3 class="font-display text-lg font-semibold mb-4 flex items-center gap-3">
+              <span class="grad-icon"><i data-lucide="layout-grid" class="w-5 h-5"></i></span>
+              Web Technologies &amp; Frameworks
+            </h3>
+            <div class="flex flex-wrap gap-3">
+              <span class="badge badge-react"><i data-lucide="atom" class="w-4 h-4"></i>React</span>
+              <span class="badge badge-node"><i data-lucide="server" class="w-4 h-4"></i>Node.js</span>
+              <span class="badge badge-express"><i data-lucide="terminal" class="w-4 h-4"></i>Express</span>
+              <span class="badge badge-flask"><i data-lucide="flask-conical" class="w-4 h-4"></i>Flask</span>
+              <span class="badge badge-tailwind"><i data-lucide="wind" class="w-4 h-4"></i>Tailwind CSS</span>
+              <span class="badge badge-html"><i data-lucide="braces" class="w-4 h-4"></i>HTML / CSS</span>
+              <span class="badge badge-django"><i data-lucide="layers" class="w-4 h-4"></i>Django</span>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="card p-7 reveal">
+            <h3 class="font-display text-lg font-semibold mb-4 flex items-center gap-3">
+              <span class="grad-icon"><i data-lucide="database" class="w-5 h-5"></i></span>
+              Databases
+            </h3>
+            <div class="flex flex-wrap gap-3">
+              <span class="badge badge-mongo"><i data-lucide="hexagon" class="w-4 h-4"></i>MongoDB</span>
+              <span class="badge badge-mysql"><i data-lucide="server" class="w-4 h-4"></i>MySQL</span>
+              <span class="badge badge-postgres"><i data-lucide="database" class="w-4 h-4"></i>PostgreSQL</span>
+              <span class="badge badge-redis"><i data-lucide="zap" class="w-4 h-4"></i>Redis</span>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="card p-7 reveal">
+            <h3 class="font-display text-lg font-semibold mb-4 flex items-center gap-3">
+              <span class="grad-icon"><i data-lucide="wrench" class="w-5 h-5"></i></span>
+              Tools &amp; Platforms
+            </h3>
+            <div class="flex flex-wrap gap-3">
+              <span class="badge badge-git"><i data-lucide="git-branch" class="w-4 h-4"></i>Git &amp; GitHub</span>
+              <span class="badge badge-vscode"><i data-lucide="edit-3" class="w-4 h-4"></i>VS Code</span>
+              <span class="badge badge-linux"><i data-lucide="terminal" class="w-4 h-4"></i>Linux</span>
+              <span class="badge badge-docker"><i data-lucide="container" class="w-4 h-4"></i>Docker</span>
+              <span class="badge badge-postman"><i data-lucide="box" class="w-4 h-4"></i>Postman</span>
+              <span class="badge badge-aws"><i data-lucide="cloud" class="w-4 h-4"></i>AWS</span>
+              <span class="badge badge-jupyter"><i data-lucide="book-open" class="w-4 h-4"></i>Jupyter</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="py-24">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <div class="section-heading reveal">
+          <span class="section-tag">Work I've built</span>
+          <h2 class="section-title">Featured projects</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Project 1 -->
+          <article class="project-card reveal">
+            <div class="project-thumb bg-gradient-to-br from-cyan-500/20 via-indigo-500/20 to-fuchsia-500/20">
+              <i data-lucide="shopping-cart" class="w-12 h-12 text-cyan-500 dark:text-cyan-400"></i>
+              <span class="project-tag">Full-Stack</span>
+            </div>
+            <div class="p-6 sm:p-7">
+              <h3 class="font-display text-lg font-semibold mb-2">ShopSphere — E-Commerce Platform</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                A full-stack e-commerce app with product listings, cart, Stripe checkout simulation, user
+                authentication (JWT), and an admin dashboard for inventory management.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-5">
+                <span class="tech-chip">React</span>
+                <span class="tech-chip">Node.js</span>
+                <span class="tech-chip">Express</span>
+                <span class="tech-chip">MongoDB</span>
+                <span class="tech-chip">Tailwind</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener" class="project-link">
+                  <i data-lucide="github" class="w-4 h-4"></i> Code
+                </a>
+                <a href="#" target="_blank" rel="noopener" class="project-link">
+                  <i data-lucide="external-link" class="w-4 h-4"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card reveal">
+            <div class="project-thumb bg-gradient-to-br from-fuchsia-500/20 via-purple-500/20 to-indigo-500/20">
+              <i data-lucide="brain" class="w-12 h-12 text-fuchsia-500 dark:text-fuchsia-400"></i>
+              <span class="project-tag">AI / ML</span>
+            </div>
+            <div class="p-6 sm:p-7">
+              <h3 class="font-display text-lg font-semibold mb-2">MediScan — Disease Prediction</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                An ML web app that predicts diabetes/heart-disease risk from patient inputs using scikit-learn models,
+                with an accuracy of 88% and an interactive results dashboard.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-5">
+                <span class="tech-chip">Python</span>
+                <span class="tech-chip">scikit-learn</span>
+                <span class="tech-chip">Flask</span>
+                <span class="tech-chip">Pandas</span>
+                <span class="tech-chip">Chart.js</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener" class="project-link">
+                  <i data-lucide="github" class="w-4 h-4"></i> Code
+                </a>
+                <a href="#" target="_blank" rel="noopener" class="project-link">
+                  <i data-lucide="external-link" class="w-4 h-4"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card reveal">
+            <div class="project-thumb bg-gradient-to-br from-emerald-500/20 via-teal-500/20 to-cyan-500/20">
+              <i data-lucide="cpu" class="w-12 h-12 text-emerald-500 dark:text-emerald-400"></i>
+              <span class="project-tag">IoT</span>
+            </div>
+            <div class="p-6 sm:p-7">
+              <h3 class="font-display text-lg font-semibold mb-2">SmartAgri — IoT Crop Monitoring</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                ESP32-based system that streams soil moisture, temperature and humidity to a live dashboard, sending
+                SMS alerts via Twilio when thresholds are crossed.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-5">
+                <span class="tech-chip">ESP32</span>
+                <span class="tech-chip">Arduino</span>
+                <span class="tech-chip">MQTT</span>
+                <span class="tech-chip">Node.js</span>
+                <span class="tech-chip">Twilio API</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener" class="project-link">
+                  <i data-lucide="github" class="w-4 h-4"></i> Code
+                </a>
+                <a href="#" target="_blank" rel="noopener" class="project-link">
+                  <i data-lucide="external-link" class="w-4 h-4"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card reveal">
+            <div class="project-thumb bg-gradient-to-br from-amber-500/20 via-orange-500/20 to-rose-500/20">
+              <i data-lucide="clipboard-list" class="w-12 h-12 text-amber-500 dark:text-amber-400"></i>
+              <span class="project-tag">Full-Stack</span>
+            </div>
+            <div class="p-6 sm:p-7">
+              <h3 class="font-display text-lg font-semibold mb-2">TaskFlow — Kanban Task Manager</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                A real-time collaborative Kanban board with drag-and-drop columns, team workspaces, and notifications
+                powered by Socket.io.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-5">
+                <span class="tech-chip">TypeScript</span>
+                <span class="tech-chip">React</span>
+                <span class="tech-chip">Socket.io</span>
+                <span class="tech-chip">PostgreSQL</span>
+                <span class="tech-chip">Prisma</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener" class="project-link">
+                  <i data-lucide="github" class="w-4 h-4"></i> Code
+                </a>
+                <a href="#" target="_blank" rel="noopener" class="project-link">
+                  <i data-lucide="external-link" class="w-4 h-4"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CERTIFICATES ===== -->
+    <section id="certificates" class="py-24">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <div class="section-heading reveal">
+          <span class="section-tag">Proof of work</span>
+          <h2 class="section-title">Certificates &amp; achievements</h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Cert 1 -->
+          <div class="cert-card reveal">
+            <span class="cert-icon bg-amber-500/15 text-amber-500"><i data-lucide="trophy" class="w-6 h-6"></i></span>
+            <h3 class="font-display font-semibold mt-4 mb-1">Smart India Hackathon — Finalist</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">Team Lead · 2025</p>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Top 10 nationally for an AI-based waste segregation solution.
+            </p>
+            <a href="#" class="cert-link">View Credential <i data-lucide="external-link" class="w-3.5 h-3.5"></i></a>
+          </div>
+
+          <!-- Cert 2 -->
+          <div class="cert-card reveal">
+            <span class="cert-icon bg-orange-500/15 text-orange-500"><i data-lucide="cloud" class="w-6 h-6"></i></span>
+            <h3 class="font-display font-semibold mt-4 mb-1">AWS Certified Cloud Practitioner</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">Amazon Web Services · 2025</p>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Cloud fundamentals, architecture, pricing and security.
+            </p>
+            <a href="#" class="cert-link">View Credential <i data-lucide="external-link" class="w-3.5 h-3.5"></i></a>
+          </div>
+
+          <!-- Cert 3 -->
+          <div class="cert-card reveal">
+            <span class="cert-icon bg-cyan-500/15 text-cyan-500"><i data-lucide="flask-conical" class="w-6 h-6"></i></span>
+            <h3 class="font-display font-semibold mt-4 mb-1">NPTEL — Programming in Java</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">IIT Certification · 2024</p>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Silver medal (top 5%) in 12-week programming course.
+            </p>
+            <a href="#" class="cert-link">View Credential <i data-lucide="external-link" class="w-3.5 h-3.5"></i></a>
+          </div>
+
+          <!-- Cert 4 -->
+          <div class="cert-card reveal">
+            <span class="cert-icon bg-indigo-500/15 text-indigo-500"><i data-lucide="code-2" class="w-6 h-6"></i></span>
+            <h3 class="font-display font-semibold mt-4 mb-1">Coursera — Meta Front-End Developer</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">Meta · 2025</p>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Professional certificate covering React, UX and testing.
+            </p>
+            <a href="#" class="cert-link">View Credential <i data-lucide="external-link" class="w-3.5 h-3.5"></i></a>
+          </div>
+
+          <!-- Cert 5 -->
+          <div class="cert-card reveal">
+            <span class="cert-icon bg-emerald-500/15 text-emerald-500"><i data-lucide="code" class="w-6 h-6"></i></span>
+            <h3 class="font-display font-semibold mt-4 mb-1">HackerRank — 5★ Problem Solver</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">HackerRank · 2024</p>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Five-star rating in Problem Solving; 200+ challenges solved.
+            </p>
+            <a href="#" class="cert-link">View Profile <i data-lucide="external-link" class="w-3.5 h-3.5"></i></a>
+          </div>
+
+          <!-- Cert 6 -->
+          <div class="cert-card reveal">
+            <span class="cert-icon bg-rose-500/15 text-rose-500"><i data-lucide="languages" class="w-6 h-6"></i></span>
+            <h3 class="font-display font-semibold mt-4 mb-1">Google — Data Analytics</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">Google Career Certificate · 2025</p>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              SQL, spreadsheets, and data-driven storytelling with Tableau.
+            </p>
+            <a href="#" class="cert-link">View Credential <i data-lucide="external-link" class="w-3.5 h-3.5"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="py-24">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <div class="section-heading reveal">
+          <span class="section-tag">Get in touch</span>
+          <h2 class="section-title">Let's build something together</h2>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-10 items-start">
+          <!-- Direct links -->
+          <div class="reveal">
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
+              I'm actively looking for Software Development roles and internships. Whether you have a job opening,
+              a project idea, or just want to say hi — my inbox is always open.
+            </p>
+
+            <div class="flex flex-col gap-4">
+              <a href="mailto:alex.morgan@email.com" class="contact-row">
+                <span class="contact-icon bg-rose-500/15 text-rose-500"><i data-lucide="mail" class="w-5 h-5"></i></span>
+                <span>
+                  <span class="block text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400">Email</span>
+                  <span class="font-medium">alex.morgan@email.com</span>
+                </span>
+              </a>
+              <a href="tel:+919876543210" class="contact-row">
+                <span class="contact-icon bg-emerald-500/15 text-emerald-500"><i data-lucide="phone" class="w-5 h-5"></i></span>
+                <span>
+                  <span class="block text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400">Phone</span>
+                  <span class="font-medium">+91 98765 43210</span>
+                </span>
+              </a>
+              <a href="https://github.com/yourusername" target="_blank" rel="noopener" class="contact-row">
+                <span class="contact-icon bg-slate-500/15 text-slate-700 dark:text-slate-300"><i data-lucide="github" class="w-5 h-5"></i></span>
+                <span>
+                  <span class="block text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400">GitHub</span>
+                  <span class="font-medium">@yourusername</span>
+                </span>
+              </a>
+              <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener" class="contact-row">
+                <span class="contact-icon bg-cyan-500/15 text-cyan-500"><i data-lucide="linkedin" class="w-5 h-5"></i></span>
+                <span>
+                  <span class="block text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400">LinkedIn</span>
+                  <span class="font-medium">/in/yourusername</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <form id="contact-form" class="card p-7 sm:p-9 reveal" novalidate>
+            <div class="grid sm:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label for="name" class="form-label">Name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required />
+              </div>
+              <div>
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required />
+              </div>
+            </div>
+            <div class="mb-4">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" id="subject" name="subject" class="form-input" placeholder="Job opportunity / Collaboration" required />
+            </div>
+            <div class="mb-6">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="message" rows="5" class="form-input resize-none" placeholder="Tell me about your idea or opening..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary w-full justify-center">
+              <i data-lucide="send" class="w-5 h-5"></i>
+              Send Message
+            </button>
+            <p id="form-status" class="hidden mt-4 text-sm font-medium text-center"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-8">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-slate-500 dark:text-slate-400">
+        © <span id="year"></span> Alex Morgan. Built with <i data-lucide="heart" class="w-4 h-4 inline text-rose-500 fill-rose-500"></i> and lots of coffee.
+      </p>
+      <div class="flex items-center gap-4">
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener" aria-label="GitHub" class="footer-icon">
+          <i data-lucide="github" class="w-4 h-4"></i>
+        </a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener" aria-label="LinkedIn" class="footer-icon">
+          <i data-lucide="linkedin" class="w-4 h-4"></i>
+        </a>
+        <a href="mailto:alex.morgan@email.com" aria-label="Email" class="footer-icon">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+        </a>
+      </div>
+      <a href="#home" class="text-sm text-slate-500 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors flex items-center gap-1">
+        <i data-lucide="arrow-up" class="w-4 h-4"></i> Back to top
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
