@@ -6,11 +6,20 @@
   "use strict";
 
   const root = document.documentElement;
-  const lucide = window.lucide;
 
-  /* -------------------- Lucide icons -------------------- */
+  // Wait for Lucide to load, then initialize
+  function waitForLucide(callback) {
+    if (window.lucide) {
+      callback();
+    } else {
+      setTimeout(() => waitForLucide(callback), 100);
+    }
+  }
+
   function initIcons() {
-    if (lucide) lucide.createIcons();
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
   }
 
   /* -------------------- Theme toggle -------------------- */
@@ -43,7 +52,6 @@
   const menuIcon = menuToggle.querySelector("i");
 
   function setMenuIcon(open) {
-    if (!lucide) return;
     const name = open ? "x" : "menu";
     menuIcon.setAttribute("data-lucide", name);
     initIcons();
@@ -189,8 +197,10 @@
   /* -------------------- Footer year -------------------- */
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  /* -------------------- Init -------------------- */
-  initIcons();
-  updateNavbar();
-  setActiveLink();
+  /* -------------------- Init - Wait for Lucide then run -------------------- */
+  waitForLucide(() => {
+    initIcons();
+    updateNavbar();
+    setActiveLink();
+  });
 })();
