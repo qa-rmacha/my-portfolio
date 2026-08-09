@@ -16,7 +16,7 @@ A modern, responsive portfolio website for a B.Sc Computer Science fresher, buil
 - **Contact** — validated form + direct links to GitHub, LinkedIn, Email, and Phone
 - **Dark/Light mode** — sleek default dark theme with cyan→indigo neon accents, persisted to localStorage
 - **Fully responsive** — mobile, tablet, and desktop layouts
-- **Micro-interactions** — smooth scrolling, scroll-reveal animations, hover effects on cards/buttons
+- **Micro-interactions** — smooth scrolling, scroll-reveal animations, hover effect on cards/buttons
 
 ## Tech Stack
 
