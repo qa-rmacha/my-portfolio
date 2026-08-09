@@ -1,6 +1,6 @@
 # Portfolio — Raju
 
-A modern, responsive portfolio website for a B.Sc Computer Science fresher, built with **HTML5**, **Tailwind CSS**, and **vanilla JavaScript**. Designed to showcase projects, skills, education, and achievements — and ready to host on GitHub Pages.
+A modern, responsive portfolio website for a B.Sc Computer Science fresher, built with **HTML5**, **Tailwind CSS**, and **vanilla JavaScript**. Designed to showcase project, skills, education, and achievements — and ready to host on GitHub Pages.
 
 ## Live Site
 
