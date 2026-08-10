@@ -109,7 +109,7 @@
     "Full-Stack Developer",
     "AI/ML Enthusiast",
     "IoT Tinkerer",
-    "B.Sc Graduate '26",
+    "B.Sc Graduate '25",
   ];
   let roleIndex = 0;
   let charIndex = 0;
@@ -149,50 +149,6 @@
     { threshold: 0.12 }
   );
   document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
-
-  /* -------------------- Contact form -------------------- */
-  const form = document.getElementById("contact-form");
-  const formStatus = document.getElementById("form-status");
-
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    const fields = ["name", "email", "subject", "message"];
-    let valid = true;
-    fields.forEach((id) => {
-      const input = document.getElementById(id);
-      input.classList.toggle("invalid", !input.value.trim());
-      if (!input.value.trim()) valid = false;
-    });
-
-    const email = document.getElementById("email");
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
-      email.classList.add("invalid");
-      valid = false;
-    }
-
-    if (!valid) {
-      formStatus.textContent = "Please fill in all fields correctly.";
-      formStatus.className = "block mt-4 text-sm font-medium text-center text-rose-500";
-      return;
-    }
-
-    // Replace with your backend endpoint (e.g. Formspree) to actually receive emails.
-    const submitBtn = form.querySelector("button[type='submit']");
-    const original = submitBtn.innerHTML;
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = '<i data-lucide="loader-2" class="w-5 h-5 animate-spin"></i>Sending...';
-    initIcons();
-
-    setTimeout(() => {
-      formStatus.textContent = "Thanks for reaching out! I'll get back to you soon.";
-      formStatus.className = "block mt-4 text-sm font-medium text-center text-emerald-500";
-      form.reset();
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = original;
-      initIcons();
-    }, 1200);
-  });
 
   /* -------------------- Footer year -------------------- */
   document.getElementById("year").textContent = new Date().getFullYear();
