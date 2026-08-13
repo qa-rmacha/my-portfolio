@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const files = ["index.html", "style.css", "script.js", "README.md", "package.json", "resume.pdf"];
+const files = ["index.html", "style.css", "script.js", "README.md", "package.json", "resume.docx"];
 const dist = path.join(__dirname, "dist");
 
 fs.rmSync(dist, { recursive: true, force: true });
