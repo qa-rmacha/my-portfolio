@@ -6,18 +6,9 @@ endobj
 << /Type /Pages /Count 4 /Kids [3 0 R 5 0 R 7 0 R 9 0 R] >>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 4 0 R >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 12 0 R /F2 13 0 R >> >> /Contents 4 0 R >>
 endobj
 4 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 6 0 R >>
-endobj
-5 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 8 0 R >>
-endobj
-6 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 10 0 R >>
-endobj
-7 0 obj
 << /Length 6354 >>
 stream
 0.086 0.188 0.310 rg BT /F2 19.0 Tf 228.9 747.0 Td (Rajukumar Macha) Tj ET
@@ -79,7 +70,10 @@ stream
 0.122 0.161 0.216 rg BT /F1 9.5 Tf 45.0 58.1 Td (Project: LoginDecom \(Web and Mobile Automation, API\)) Tj ET
 endstream
 endobj
-8 0 obj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 12 0 R /F2 13 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
 << /Length 6736 >>
 stream
 0.086 0.188 0.310 rg BT /F2 10.0 Tf 45.0 747.0 Td (Tools: Selenium with Java, REST Assured API, Postman, Cucumber and TestNG Bitbucket, Jenkins, Kafka,) Tj ET
@@ -140,7 +134,10 @@ stream
 0.086 0.188 0.310 rg BT /F2 10.0 Tf 45.0 62.8 Td (Title: Rent A Center) Tj ET
 endstream
 endobj
-9 0 obj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 12 0 R /F2 13 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
 << /Length 7101 >>
 stream
 0.086 0.188 0.310 rg BT /F2 10.0 Tf 45.0 747.0 Td (Description:) Tj ET
@@ -203,6 +200,9 @@ stream
 0.122 0.161 0.216 rg BT /F1 9.5 Tf 45.0 58.9 Td (Station, Physician, Inventory, and SCM.) Tj ET
 endstream
 endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 12 0 R /F2 13 0 R >> >> /Contents 10 0 R >>
+endobj
 10 0 obj
 << /Length 830 >>
 stream
@@ -227,17 +227,17 @@ xref
 0000000009 00000 n 
 0000000058 00000 n 
 0000000133 00000 n 
-0000000269 00000 n 
-0000000405 00000 n 
-0000000541 00000 n 
-0000000678 00000 n 
-0000007084 00000 n 
-0000013872 00000 n 
-0000021025 00000 n 
-0000021907 00000 n 
-0000021978 00000 n 
+0000000271 00000 n 
+0000006677 00000 n 
+0000006815 00000 n 
+0000013603 00000 n 
+0000013741 00000 n 
+0000020894 00000 n 
+0000021033 00000 n 
+0000021915 00000 n 
+0000021986 00000 n 
 trailer
 << /Size 13 /Root 1 0 R >>
 startxref
-22054
+22062
 %%EOF
