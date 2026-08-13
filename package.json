@@ -2,7 +2,7 @@
   "name": "my-portfolio",
   "version": "1.0.0",
   "private": true,
-  "description": "Personal portfolio site for a B.Tech CSE fresher",
+  "description": "Personal portfolio site for Rajukumar Macha, QA & Test Automation specialist",
   "scripts": {
     "build": "node build.js",
     "preview": "web-preview"

@@ -105,11 +105,12 @@
   /* -------------------- Typed effect -------------------- */
   const typedEl = document.getElementById("typed");
   const roles = [
-    "Aspiring Software Engineer",
-    "Full-Stack Developer",
-    "AI/ML Enthusiast",
-    "IoT Tinkerer",
-    "B.Sc Graduate '25",
+    "QA Engineer at SUSE",
+    "Test Automation Specialist",
+    "SDET",
+    "API & System Testing Expert",
+    "Performance Testing (JMeter)",
+    "Quality Advocate",
   ];
   let roleIndex = 0;
   let charIndex = 0;

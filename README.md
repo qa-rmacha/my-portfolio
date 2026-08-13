@@ -1,6 +1,6 @@
-# Portfolio — Raju
+# Portfolio — Raju Kumar Macha
 
-A modern, responsive portfolio website for a B.Sc Computer Science fresher, built with **HTML5**, **Tailwind CSS**, and **vanilla JavaScript**. Designed to showcase project, skills, education, and achievements — and ready to host on GitHub Pages.
+A modern, responsive portfolio website for Rajukumar Macha — a QA & Test Automation specialist at SUSE with 11+ years of experience in Software Quality Assurance, built with **HTML5**, **Tailwind CSS**, and **vanilla JavaScript**. Designed to showcase experience, skills, real projects (banking, insurance, healthcare, e-commerce, enterprise imaging), and domains — and ready to host on GitHub Pages.
 
 ## Live Site
 
@@ -9,11 +9,12 @@ A modern, responsive portfolio website for a B.Sc Computer Science fresher, buil
 ## Features
 
 - **Hero section** — animated typing effect, code-card visual, CTAs ("View Projects", "Download Resume")
-- **About Me** — professional summary, education (B.Sc, university, graduation year, CGPA), career goals
-- **Skills & Tech Stack** — categorized badges: Languages, Web Technologies/Frameworks, Databases, Tools
-- **Projects** — 4 featured fresher projects (Full-Stack, AI/ML, IoT) with tech stack and GitHub/Live links
-- **Certificates & Achievements** — hackathons, online certifications, coding milestones
-- **Contact** — validated form + direct links to GitHub, LinkedIn, Email, and Phone
+- **About Me** — professional summary (11+ years in QA), stats, education (B.Sc Computer Science, Kakatiya University)
+- **Skills & Tech Stack** — categorized badges: Languages, Testing & Automation, DevOps & Cloud, Performance & Observability
+- **Experience** — timeline: SUSE, Exaze (Discovery), OCBC Bank, OpenText, Cigniti
+- **Projects** — real projects: LoginDecom (OCBC), Imaging Viewers (OpenText), Rent A Center (Hybris), Alfa Insurance (Guidewire)
+- **Domains & Achievements** — banking, insurance, healthcare, e-commerce, ECM, career highlights
+- **Contact** — direct links to GitHub, LinkedIn, Website (LearnCen), Email, and Phone
 - **Dark/Light mode** — sleek default dark theme with cyan→indigo neon accents, persisted to localStorage
 - **Fully responsive** — mobile, tablet, and desktop layouts
 - **Micro-interactions** — smooth scrolling, scroll-reveal animations, hover effect on cards/buttons
@@ -63,10 +64,11 @@ python3 -m http.server 8080
 Replace these placeholders with your own details in `index.html`:
 
 - `Raju` → your name
-- `alex.morgan@email.com`, `+91 99491 23456` → contact info
+- `macha.raajkumar@gmail.com`, `+65 8902 0571` → contact info
 - `qa-rmacha` / `rajukumar-macha` in GitHub/LinkedIn links → your handles
-- `resume.pdf` → link to your actual resume
-- Education, skills, projects, and certificates → your own data
+- `my.learncen.com` → your personal website
+- `resume.pdf` → link to your actual resume (placeholder PDF)
+- Education, skills, experience, projects, and domains → your own data
 
 To receive real form submissions, point the form handler in `script.js` to a
 service like [Formspree](https://formspree.io) or your own backend.

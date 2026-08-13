@@ -73,6 +73,20 @@ body {
   -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
 }
 
+/* Floating tech icons in the background */
+.tech-icon {
+  position: absolute;
+  opacity: 0.9;
+  animation: tech-float 20s ease-in-out infinite;
+  transition: opacity 0.3s;
+}
+@keyframes tech-float {
+  0%, 100% { transform: translate(0, 0) rotate(-4deg) scale(1); }
+  25%      { transform: translate(8px, -16px) rotate(4deg) scale(1.05); }
+  50%      { transform: translate(-10px, -6px) rotate(-2deg) scale(0.97); }
+  75%      { transform: translate(6px, -20px) rotate(2deg) scale(1.03); }
+}
+
 /* ---------- Navbar ---------- */
 #navbar.scrolled {
   background: rgba(241, 245, 249, 0.8);
@@ -462,6 +476,35 @@ html.dark .chip {
 .badge-postman{ color: #ea580c; background: rgba(234, 88, 12, 0.12);   border-color: rgba(234, 88, 12, 0.25); }
 .badge-aws    { color: #d97706; background: rgba(217, 119, 6, 0.12);   border-color: rgba(217, 119, 6, 0.25); }
 .badge-jupyter{ color: #9333ea; background: rgba(147, 51, 234, 0.12);  border-color: rgba(147, 51, 234, 0.25); }
+.badge-go     { color: #0ea5e9; background: rgba(14, 165, 233, 0.12);   border-color: rgba(14, 165, 233, 0.25); }
+.badge-shell  { color: #059669; background: rgba(5, 150, 105, 0.12);    border-color: rgba(5, 150, 105, 0.25); }
+.badge-selenium{ color: #16a34a; background: rgba(22, 163, 74, 0.12);   border-color: rgba(22, 163, 74, 0.25); }
+.badge-playwright{ color: #15803d; background: rgba(21, 128, 61, 0.12); border-color: rgba(21, 128, 61, 0.25); }
+.badge-cypress { color: #475569; background: rgba(71, 85, 105, 0.12);   border-color: rgba(71, 85, 105, 0.25); }
+.badge-testng { color: #dc2626; background: rgba(220, 38, 38, 0.12);    border-color: rgba(220, 38, 38, 0.25); }
+.badge-cucumber{ color: #16a34a; background: rgba(22, 163, 74, 0.12);   border-color: rgba(22, 163, 74, 0.25); }
+.badge-rest   { color: #e11d48; background: rgba(225, 29, 72, 0.12);    border-color: rgba(225, 29, 72, 0.25); }
+.badge-appium { color: #7c3aed; background: rgba(124, 58, 237, 0.12);   border-color: rgba(124, 58, 237, 0.25); }
+.badge-jenkins{ color: #dc2626; background: rgba(220, 38, 38, 0.12);    border-color: rgba(220, 38, 38, 0.25); }
+.badge-k8s    { color: #2563eb; background: rgba(37, 99, 235, 0.12);    border-color: rgba(37, 99, 235, 0.25); }
+.badge-jira   { color: #2563eb; background: rgba(37, 99, 235, 0.12);    border-color: rgba(37, 99, 235, 0.25); }
+.badge-azure  { color: #0284c7; background: rgba(2, 132, 199, 0.12);    border-color: rgba(2, 132, 199, 0.25); }
+.badge-jmeter { color: #b91c1c; background: rgba(185, 28, 28, 0.12);    border-color: rgba(185, 28, 28, 0.25); }
+.badge-k6     { color: #7c3aed; background: rgba(124, 58, 237, 0.12);   border-color: rgba(124, 58, 237, 0.25); }
+.badge-grafana{ color: #f59e0b; background: rgba(245, 158, 11, 0.12);   border-color: rgba(245, 158, 11, 0.25); }
+.badge-cloudnative{ color: #0891b2; background: rgba(8, 145, 178, 0.12); border-color: rgba(8, 145, 178, 0.25); }
+.badge-uft    { color: #dc2626; background: rgba(220, 38, 38, 0.12);    border-color: rgba(220, 38, 38, 0.25); }
+.badge-katalon{ color: #7c3aed; background: rgba(124, 58, 237, 0.12);   border-color: rgba(124, 58, 237, 0.25); }
+.badge-soapui { color: #b45309; background: rgba(180, 83, 9, 0.12);     border-color: rgba(180, 83, 9, 0.25); }
+.badge-accelq { color: #0d9488; background: rgba(13, 148, 136, 0.12);   border-color: rgba(13, 148, 136, 0.25); }
+.badge-bitbucket{ color: #2563eb; background: rgba(37, 99, 235, 0.12);  border-color: rgba(37, 99, 235, 0.25); }
+.badge-helm   { color: #0e7490; background: rgba(14, 116, 144, 0.12);   border-color: rgba(14, 116, 144, 0.25); }
+.badge-openshift{ color: #e11d48; background: rgba(225, 29, 72, 0.12);  border-color: rgba(225, 29, 72, 0.25); }
+.badge-gcp    { color: #ea580c; background: rgba(234, 88, 12, 0.12);    border-color: rgba(234, 88, 12, 0.25); }
+.badge-testkube{ color: #7c3aed; background: rgba(124, 58, 237, 0.12);  border-color: rgba(124, 58, 237, 0.25); }
+.badge-prometheus{ color: #dc2626; background: rgba(220, 38, 38, 0.12); border-color: rgba(220, 38, 38, 0.25); }
+.badge-kibana { color: #0891b2; background: rgba(8, 145, 178, 0.12);    border-color: rgba(8, 145, 178, 0.25); }
+.badge-powerbi{ color: #d97706; background: rgba(217, 119, 6, 0.12);    border-color: rgba(217, 119, 6, 0.25); }
 
 /* ---------- Project cards ---------- */
 .project-card {
@@ -638,5 +681,5 @@ html.dark .cert-link {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
-  .blob, .animate-float, .scroll-hint { animation: none; }
+  .blob, .animate-float, .scroll-hint, .tech-icon { animation: none; }
 }
